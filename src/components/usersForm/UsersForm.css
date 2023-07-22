@@ -1,0 +1,98 @@
+.dashboard_form--container {
+    width: 35vw;
+    max-width: 360px;
+    background-color: var(--background_color);
+    position: absolute;
+    top: -40px;
+    left: 37vw;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+}
+
+.dashboar_form--title {
+    height: 35px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboar_form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.dashboar_form>label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* #field {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+} */
+
+
+
+#field {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    margin-bottom: 10px;
+    font-weight: 500;
+    outline: none;
+    padding: 10px;
+}
+
+#field:focus {
+    text-indent: 15px;
+}
+
+.submit {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #f0f0f0;
+    border: solid 1px var(--active_color);
+}
+
+.cancel {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 15px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(229, 100, 100);
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+}
+
+.cancel:hover {
+    background-color: rgb(255, 113, 113);
+}

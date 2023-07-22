@@ -1,0 +1,29 @@
+:root {
+  font-family: 'Roboto Mono', monospace;
+  --background_color: #f0f0f0;
+  --font_color: #313131;
+  --active_color: #26b3c4;
+  --active_color--lither: #8be4ee;
+}
+
+* {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--links_color);
+}
+
+html{
+  background-color: var(--background_color);
+}
+
