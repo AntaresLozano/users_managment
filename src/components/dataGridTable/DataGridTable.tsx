@@ -1,7 +1,7 @@
 import { DataGrid, GridRowsProp } from "@mui/x-data-grid"
-import { useContext } from "react"
-import { UsersContext } from "../../context/usersContext"
+import { UsersContext } from "../../context";
 import { UsersForm } from '../usersForm'
+import { useContext } from "react"
 import './DataGridTable.css'
 
 

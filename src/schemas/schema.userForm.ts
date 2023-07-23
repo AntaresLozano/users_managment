@@ -1,6 +1,5 @@
 import * as yup from "yup"
 
-
 export const UsersSchema = yup.object().shape({
     name: yup.string().required("this field is required"),
     apellidos: yup.string().required("this field is required"),

@@ -1,9 +1,8 @@
 import { UsersContextProvider } from './context/usersContext';
-import AppContent from './components/appContent/AppContent';
 import { ThemeContextProvider } from './context/ThemeContext';
+import AppContent from './components/appContent/AppContent';
 
 function App() {
-
 
   return (
     <>

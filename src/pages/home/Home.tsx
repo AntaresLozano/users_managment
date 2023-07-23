@@ -1,7 +1,7 @@
+import { ThemeContext } from '../../context';
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import './Home.css';
-import { ThemeContext } from '../../context/ThemeContext';
 function Home() {
 
     const { darkTheme } = useContext(ThemeContext)

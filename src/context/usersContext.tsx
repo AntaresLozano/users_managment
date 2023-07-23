@@ -1,7 +1,7 @@
-import { createContext, useState } from 'react'
-import { User } from '../models';
 import { CreateUserRequest, DeleteUserRequest, EditUserRequest, getUsersRequest } from '../services';
+import { createContext, useState } from 'react'
 import { GridColDef } from '@mui/x-data-grid';
+import { User } from '../models';
 
 const initialUsersContextValue = {
     users: [],
@@ -23,13 +23,16 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
     const [editUserId, setEditUserId] = useState<number>();
     const [rowValues, setRowValues] = useState<User>();
 
-
     const getUsers = async () => {
         setIsLoading(true);
-        const response = await getUsersRequest();
-        const users = response.data;
-        setUsers(users);
-        setIsLoading(false);
+        try {
+            const response = await getUsersRequest();
+            const users = response.data;
+            setUsers(users);
+            setIsLoading(false);
+        } catch (e) {
+            console.log(e)
+        }
     };
 
     const handleDeleteUser = async (userId: number) => {
@@ -100,7 +103,6 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
     const showForm: () => void = () => {
         setactiveForm(!activeForm);
     };
-
 
     return (
         <UsersContext.Provider value={{ users, getUsers, isLoading, getColumns, createUser, columns, showForm, activeForm, editing, EditUser, editUserId, rowValues, setEditing }} >

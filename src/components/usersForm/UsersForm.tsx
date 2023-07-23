@@ -1,17 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import roles from '../../assets/data/roles';
-import gender from '../../assets/data/gender';
-import './UsersForm.css';
-import { HideHandler, User } from '../../models';
-import { useContext } from 'react';
 import { UsersContext } from '../../context/usersContext';
+import { HideHandler, User } from '../../models';
+import gender from '../../assets/data/gender';
+import roles from '../../assets/data/roles';
 import { UsersSchema } from '../../schemas';
+import { useContext } from 'react';
+import './UsersForm.css';
 
 function UsersForm({ onHide, onCreateUser }: { onHide: HideHandler; onCreateUser: (userData: User) => void }) {
 
     const { editing, EditUser, editUserId, setEditing, rowValues } = useContext(UsersContext);
 
-    // console.log(editUserId)
     const hideForm = () => {
         onHide(true);
     };
@@ -28,7 +27,6 @@ function UsersForm({ onHide, onCreateUser }: { onHide: HideHandler; onCreateUser
         email: "",
         role: "",
         genero: "",
-        // foto: "",
         status: 1,
         password: 123,
     };
@@ -97,18 +95,6 @@ function UsersForm({ onHide, onCreateUser }: { onHide: HideHandler; onCreateUser
                             ))}
                         </Field>
                         <ErrorMessage name="genero" component="div" className="error-message" />
-
-                        {/* <label>Foto</label>
-                        <Field
-                            as="input"
-                            type="file"
-                            id={touched.foto && errors.foto ? 'error' : 'field'}
-                            name="foto"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
-                        <ErrorMessage name="foto" component="div" className="error-message" /> */}
-                        
                         <button className='submit' type='submit'>Save</button>
                         <button className='cancel' onClick={() => cancel()}></button>
                     </Form>

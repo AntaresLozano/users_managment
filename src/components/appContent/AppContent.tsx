@@ -1,13 +1,14 @@
-import { Route, Routes } from "react-router-dom"
-import { Navbar } from ".."
 import { Dashboard, Home, NotFound } from "../../pages"
-import './AppContent.css'
-import { useContext } from 'react';
 import { ThemeContext } from "../../context/ThemeContext";
+import { Route, Routes } from "react-router-dom"
+import { useContext } from 'react';
+import { Navbar } from ".."
+import './AppContent.css'
 
 const AppContent = () => {
-    const { darkTheme } = useContext(ThemeContext)
 
+    const { darkTheme } = useContext(ThemeContext)
+    
     return (
         <div className={darkTheme ? 'dark' : 'light'}>
             <Navbar />

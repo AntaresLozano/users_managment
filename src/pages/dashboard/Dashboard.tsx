@@ -1,12 +1,7 @@
 import './Dashboard.css';
 import { useContext, useEffect } from 'react';
-// import { DataGrid, GridRowsProp } from '@mui/x-data-grid';
-// import { getUsersRequest, DeleteUserRequest, CreateUserRequest } from '../../services';
-// import { User } from '../../models';
-// import { UsersForm } from '../../components';
-import { UsersContext } from '../../context/usersContext';
 import { DataGridTable } from '../../components';
-import { ThemeContext } from '../../context/ThemeContext';
+import { ThemeContext, UsersContext } from '../../context';
 
 function Dashboard() {
 
@@ -21,10 +16,6 @@ function Dashboard() {
         getColumns()
     }, [users]);
 
-    // createUser
-
-    // showForm
-
     return (
         <div className="dashboard_container">
             <div className="dashboard_title--container">
@@ -35,7 +26,7 @@ function Dashboard() {
                     data.
                 </p>
             </div>
-            <div style={{backgroundColor:"white"}}>
+            <div style={{ backgroundColor: "white" }}>
                 <DataGridTable isLoading={isLoading} />
             </div>
         </div >

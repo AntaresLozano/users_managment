@@ -5,7 +5,6 @@ const initialThemeContext = {
     switchTheme: () => { }
 }
 
-
 export const ThemeContext = createContext(initialThemeContext);
 
 export const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {

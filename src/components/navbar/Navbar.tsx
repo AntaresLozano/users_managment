@@ -1,10 +1,10 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { ThemeContext } from '../../context/ThemeContext'
-import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Switch } from '@mui/material'
+import { useContext } from 'react'
+import './Navbar.css'
 
 function Navbar() {
 
