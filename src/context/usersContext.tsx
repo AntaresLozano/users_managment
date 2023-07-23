@@ -11,6 +11,7 @@ const initialUsersContextValue = {
     createUser: () => { },
     columns: [],
 };
+
 export const UsersContext = createContext(initialUsersContextValue);
 
 export const UsersContextProvider = ({ children }: { children: React.ReactNode }) => {
@@ -52,7 +53,7 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
         }
     };
 
-    const showEditForm = (row) => {
+    const showEditForm = (row: User) => {
         setEditing(true)
         setEditUserId(row.id)
         setRowValues(row)
@@ -99,6 +100,7 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
     const showForm: () => void = () => {
         setactiveForm(!activeForm);
     };
+
 
     return (
         <UsersContext.Provider value={{ users, getUsers, isLoading, getColumns, createUser, columns, showForm, activeForm, editing, EditUser, editUserId, rowValues, setEditing }} >

@@ -2,15 +2,24 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-
+import { ThemeContext } from '../../context/ThemeContext'
+import { useContext } from 'react'
+import { Switch } from '@mui/material'
 
 function Navbar() {
+
+    const { darkTheme, switchTheme } = useContext(ThemeContext)
+
+    const handleChangeTheme = () => {
+        switchTheme();
+    }
+
     return (
         <div>
             <div className="navbar_container">
-                <div className="navbar_logo">
+                <div className="navbar_logo" >
                     <FontAwesomeIcon className='logo' icon={faUser} />
-                    <p>Users Management</p>
+                    <p id={darkTheme ? 'dark' : 'light'}>Users Management</p>
                 </div>
                 <div className="navbar_links">
                     <ul>
@@ -18,6 +27,13 @@ function Navbar() {
                         <li><Link to="/dashboard" >Dashboard</Link></li>
                     </ul>
                 </div>
+                <Switch
+                    checked={darkTheme}
+                    onChange={handleChangeTheme}
+                    color="primary"
+                    name="themeSwitch"
+                    inputProps={{ 'aria-label': 'Toggle dark theme' }}
+                />
             </div>
         </div>
     )

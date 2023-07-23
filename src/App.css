@@ -1,0 +1,9 @@
+.dark {
+    background-color: #333;
+    /* Cambia el fondo en modo oscuro */
+}
+
+.light {
+    background-color: #f0f0f0;
+    /* Cambia el fondo en modo claro */
+}

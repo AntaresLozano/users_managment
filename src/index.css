@@ -1,6 +1,7 @@
 :root {
   font-family: 'Roboto Mono', monospace;
   --background_color: #f0f0f0;
+  --background_color--dark: #242424;
   --font_color: #313131;
   --active_color: #26b3c4;
   --active_color--lither: #8be4ee;
@@ -24,7 +25,6 @@ a {
   color: var(--links_color);
 }
 
-html{
-  background-color: var(--background_color);
-}
+
+
 

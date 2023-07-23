@@ -6,10 +6,12 @@ import { useContext, useEffect } from 'react';
 // import { UsersForm } from '../../components';
 import { UsersContext } from '../../context/usersContext';
 import { DataGridTable } from '../../components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 function Dashboard() {
 
     const { users, getUsers, isLoading, getColumns } = useContext(UsersContext);
+    const { darkTheme } = useContext(ThemeContext)
 
     useEffect(() => {
         getUsers();
@@ -26,14 +28,16 @@ function Dashboard() {
     return (
         <div className="dashboard_container">
             <div className="dashboard_title--container">
-                <h1 className="dashboard_title">Dashboard</h1>
-                <p className="dashboard_description">
+                <h1 id={darkTheme ? 'dark' : 'light'} className="dashboard_title">Dashboard</h1>
+                <p id={darkTheme ? 'dark' : 'light'} className="dashboard_description">
                     This is where the magic happens, feel free to <b>interact</b> with the users table. Here
                     you can add, modify, delete users, sort them by name, email, status, search especific data with the filter tool, among other relevant
                     data.
                 </p>
             </div>
-            <DataGridTable isLoading={isLoading} />
+            <div style={{backgroundColor:"white"}}>
+                <DataGridTable isLoading={isLoading} />
+            </div>
         </div >
     );
 }

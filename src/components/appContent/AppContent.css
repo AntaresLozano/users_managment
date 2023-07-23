@@ -1,0 +1,10 @@
+.dark {
+    height: 100vh;
+    background-color: var(--background_color--dark);
+    color: white;
+}
+
+.light {
+    height: 100vh;
+    background-color: var(--background_color);
+}
