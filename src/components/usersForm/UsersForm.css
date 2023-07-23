@@ -54,6 +54,24 @@
     padding: 10px;
 }
 
+#error {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
+    margin-bottom: 10px;
+    font-weight: 500;
+    outline: solid 1px var(--error);
+    padding: 10px;
+}
+
+.error-message {
+    font-size: 0.7rem;
+    color: var(--error);
+}
+
 #field:focus {
     text-indent: 15px;
 }
@@ -87,7 +105,7 @@
     border-radius: 100%;
     border: none;
     cursor: pointer;
-    background-color: rgb(229, 100, 100);
+    background-color: var(--error);
     -webkit-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 7px 20px -3px rgba(0, 0, 0, 0.11);

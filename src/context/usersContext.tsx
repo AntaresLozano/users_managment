@@ -2,7 +2,6 @@ import { createContext, useState } from 'react'
 import { User } from '../models';
 import { CreateUserRequest, DeleteUserRequest, EditUserRequest, getUsersRequest } from '../services';
 import { GridColDef } from '@mui/x-data-grid';
-import { Margin } from '@mui/icons-material';
 
 const initialUsersContextValue = {
     users: [],
@@ -38,7 +37,6 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
     };
 
     const EditUser = async (userId: number, newUserData: User) => {
-        console.log(userId, newUserData)
         const updatedUsers = users.map((user) => {
             if (user.id === userId) {
                 return { ...user, ...newUserData };
@@ -72,14 +70,16 @@ export const UsersContextProvider = ({ children }: { children: React.ReactNode }
             });
         });
 
+        const buttonStyle = { marginRight: "10px", padding: "3px", borderRadius: "5px", border: " solid 1px #313131", cursor: "pointer" };
+
         newColumns.push({
             field: 'actions',
             headerName: 'Actions',
             width: 120,
             renderCell: (params) => (
                 <div>
-                    <button className='table_button' onClick={() => handleDeleteUser(params.row.id)}>Delete</button>
-                    <button  className='table_button' onClick={() => showEditForm(params.row)}>Edit</button>
+                    <button className='table_button' style={buttonStyle} onClick={() => handleDeleteUser(params.row.id)}>Delete</button>
+                    <button style={buttonStyle} onClick={() => showEditForm(params.row)}>Edit</button>
                 </div>
             ),
         });
