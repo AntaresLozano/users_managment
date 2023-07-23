@@ -48,3 +48,13 @@
 #dark {
     color: white;
 }
+
+@media (min-width: 350px) and (max-width: 768px) {
+ .navbar_container{
+    width: 100vw;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 20px;
+ }
+}
+
